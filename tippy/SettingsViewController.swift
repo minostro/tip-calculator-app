@@ -23,7 +23,6 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
         let tipPorcentageIndex = self.userDefaults.integer(forKey: "default_tip_porcentage")
         tipSegmentedControl.selectedSegmentIndex = tipPorcentageIndex
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,7 +32,6 @@ class SettingsViewController: UIViewController {
    
     /*
      // MARK: - Navigation
-     
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destinationViewController.
@@ -44,5 +42,14 @@ class SettingsViewController: UIViewController {
         self.userDefaults.set(tipSegmentedControl.selectedSegmentIndex, forKey:"default_tip_porcentage")
         self.userDefaults.synchronize()
     }
-    
+
+    @IBAction func onTouchDown(_ sender: Any) {
+        let bounds = tipSegmentedControl.bounds
+        UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: .curveEaseInOut, animations: {
+            self.tipSegmentedControl.bounds = CGRect(x: bounds.origin.x - 10, y: bounds.origin.y, width: bounds.size.width + 20, height: bounds.size.height)}) { (success:Bool) in
+                if success {
+                    self.tipSegmentedControl.bounds = bounds
+                }
+        }
+    }
 }
