@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipSegmentedControl: UISegmentedControl!
+
     let TIP_PERCENTAGES = [0.18, 0.2, 0.25]
     var userDefaults: UserDefaults
 
@@ -33,6 +34,8 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         let tipPorcentageIndex = self.userDefaults.integer(forKey: "default_tip_porcentage")
         tipSegmentedControl.selectedSegmentIndex = tipPorcentageIndex
+        onBillChange(tipSegmentedControl)
+        billTextField.becomeFirstResponder()
     }
     
     override func didReceiveMemoryWarning() {
