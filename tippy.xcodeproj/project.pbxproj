@@ -15,6 +15,7 @@
 		41B38FDB1F3A7E470067F062 /* tippyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B38FDA1F3A7E470067F062 /* tippyTests.swift */; };
 		41B38FE61F3A7E470067F062 /* tippyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B38FE51F3A7E470067F062 /* tippyUITests.swift */; };
 		41ED4E9C1F3AA8CF00F85186 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED4E9B1F3AA8CF00F85186 /* SettingsViewController.swift */; };
+		41ED4E9E1F3BF2BE00F85186 /* BillTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED4E9D1F3BF2BE00F85186 /* BillTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		41B38FE51F3A7E470067F062 /* tippyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tippyUITests.swift; sourceTree = "<group>"; };
 		41B38FE71F3A7E470067F062 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41ED4E9B1F3AA8CF00F85186 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = tippy/SettingsViewController.swift; sourceTree = "<group>"; };
+		41ED4E9D1F3BF2BE00F85186 /* BillTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BillTextField.swift; path = tippy/BillTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		41B38FB91F3A7E470067F062 = {
 			isa = PBXGroup;
 			children = (
+				41ED4E9D1F3BF2BE00F85186 /* BillTextField.swift */,
 				41ED4E9B1F3AA8CF00F85186 /* SettingsViewController.swift */,
 				41B38FC41F3A7E470067F062 /* tippy */,
 				41B38FD91F3A7E470067F062 /* tippyTests */,
@@ -264,6 +267,7 @@
 			files = (
 				41B38FC81F3A7E470067F062 /* ViewController.swift in Sources */,
 				41B38FC61F3A7E470067F062 /* AppDelegate.swift in Sources */,
+				41ED4E9E1F3BF2BE00F85186 /* BillTextField.swift in Sources */,
 				41ED4E9C1F3AA8CF00F85186 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
