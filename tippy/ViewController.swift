@@ -17,6 +17,7 @@ class ViewController: UIViewController {
 
     let TIP_PERCENTAGES = [0.18, 0.2, 0.25]
     var userDefaults: UserDefaults
+    var lastActive : NSDate?
 
     required init?(coder aDecoder: NSCoder) {
         self.userDefaults = UserDefaults.standard
@@ -55,5 +56,16 @@ class ViewController: UIViewController {
         
         tipLabel.text = String(format: "$%.2f", tipAmount)
         totalLabel.text = String(format: "$%.2f", totalAmount)
+    }
+    
+    func willResignActive() {
+        lastActive = NSDate()
+    }
+    
+    func enterForeground() {
+        let seconds = lastActive!.timeIntervalSinceNow * -1
+        if (seconds > 60*10) {
+            billTextField.text = ""
+        }
     }
 }
